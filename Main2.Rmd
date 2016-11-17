@@ -1,0 +1,56 @@
+---
+title: "Master Thesis"
+author: "Grigor Dimitrov"
+date: "`r format(Sys.time(), '%d %B, %Y')`"
+output:
+  pdf_document:
+    highlight: tango
+    latex_engine: xelatex
+    number_sections: yes
+    toc: yes
+  html_document:
+    toc: yes
+header-includes: \usepackage{placeins} 
+  \usepackage{fancyhdr} 
+  \usepackage{setspace}
+  \usepackage{chngcntr} \usepackage{microtype} 
+  \onehalfspacing 
+  \counterwithin{figure}{section}
+  \counterwithin{table}{section} 
+  \usepackage{rotating, graphicx}
+linkcolor: black
+geometry: margin = 1.2in
+fontsize: 12pt
+urlcolor: black
+bibliography: thesis.bib
+abstract: "Write an abstract!"
+---
+
+```{r echo=FALSE, message = FALSE}
+library(stargazer)
+```
+
+
+# Introduction
+
+```{r child = 'introduction2.Rmd'}
+```
+
+# Literature review
+
+```{r child = 'literature2.Rmd'}
+```
+
+# Methodology
+
+```{r child = 'methodology3.Rmd'}
+```
+
+
+# Appendix
+
+```{r child = 'appendix.Rmd'}
+```
+
+
+# References

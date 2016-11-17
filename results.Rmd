@@ -1,0 +1,191 @@
+---
+title: "results"
+author: "Grigor Dimitrov"
+date: "September 23, 2016"
+output: pdf_document
+---
+
+##Survey Data
+
+The original data consisted of 495 observations. Before proceeding with analysis, the data was cleaned based on several considerations. Namely, I looked at whether 1) respondents were speeding throughout the survey, 2) subjects were flatliners, e.g. if they have answered the grid question with the same answer, and 3) if they had low activity less than 1000 observation in the behavioral data. 4) if the attempted to participate the survey more than once. The final dataset thus, consists of 426 observations.
+
+``` {r echo=FALSE, results = 'asis'}
+
+stargazer(survey_results[["surveyRAUA"]], type="latex", summary = FALSE, digits = 1)
+
+```
+
+
+Looking at the demographic characteristics, we see that there is equal split between males and females. Seeing the distribution among age, the population above 50 years old is  overrepresented, accounting for 59% of the sample. In terms of income, the distribution is normal, most of the subject indicated yearly income between 33.000 – 66.000 euro.
+
+All subjects were actively involved in the trip planning as a main decision maker or contributed to the decision, subject who didn’t participated in the decision making were screened out. Business trip only travellers were screened out as well, those left in the sample are either leisure or leisure and travelers. Finally, we see that the majority of respondents indicated they have booked both flight and accommodation.
+
+The next part of the survey, explored the trip characteristics with regards to their general planning, online behavior and destination. These data points were used as control variables for the analysis. On average it took respondents 9 weeks to plan the whole trip, for about 40% it took between 1 and 4 weeks to plan everything, while 15% indicated they needed more than 20 weeks of planning.
+
+The majority (80%) visited countries within Europe, and 57% have not visited the country before. On average, people who have visited the country before went there for the 4th time. Typically together were travelling 2 people, the largest travel group consisted of 14 people and they have spent approximately 9 nights away from home. About 34% of the respondents indicated they have spent more than 10 days. Only 20% of the subjects have stayed with relatives.
+
+The majority of subjects researched for the trip using the Internet, but many have also asked for advice from friends or relatives or approached a travel agent. Moreover, the internet is widely used for booking accommodation and not so much for travelling or booking ‘entertainment’ online.
+
+### Risk and uncertainty
+
+For understanding risk and uncertainty attitudes the seven item scale was analyzed using factor analysis. According to the analysis results we can not accept the hypothesis that two factors are sufficient to explain the seven item scale that has been used. However exploring further the resuts show that the factor loadings of the different variables have the highest loadings on the assumed two underlying factors i.e. risk and uncertainty. Furthermore, running factor analysis when assuming 3 factors resuts in separating item #4 as a distinct factor with low factor loading. According to (Yong 2013) choosing too few factors may lead to leaving out importan valance out of tha anlysis. However, I accept the high factor loadings onto the two assumed factors as a sufficient reason to continue the analysis with two factors. Namely, items 1 to 3 accounting for underlying risk attitude and items 4 to 7 accounting for attitude towards uncertainty.
+
+---
+``` {r echo=FALSE}
+
+print(export_files$RAUA_factor, digits = 2, cutoff = .4, sort = FALSE)
+
+```
+---
+
+### BIG5
+
+Running exploratory factor analysis on BIG5 items resuled in confirming the initially assumed personality traits. Furthermore, based on the results we can accept the hypothesis that 5 factors are sufficient to explain the variance of the 11 item scale.
+
+---
+``` {r echo=FALSE}
+
+print(export_files$big5_factor, digits = 2, cutoff = .4, sort = FALSE)
+
+```
+---
+
+Next, with the aid of factor analysis respondents were grouped into 2x2 groups: 1) risk & averse seeking and 2) uncertainty averse and seeking. It is interesting to observe some of the descriptive statistics which can already provide some insights on what the relationships between people’s risk and uncertainty attitude and their travel behavior based on the survey data.  First of all, the majority of subjects are risk averse and uncertainty averse. Subject being risk seeking account for 30% of the population, while the uncertainty seeking are 40%. 
+
+Uncertainty attitude
+
+averse
+seeking
+Risk attitude
+averse
+133
+161
+seeking
+119
+13
+Note: The correlation between the means of RA and UA scales show correlation of 0.58
+
+Interestingly enough, given the data, it is observed that risk averse and uncertainty avoidant subjects actually prefer to go to a destination they haven't visited before, while risk and uncertainty seeking respondents prefer a bit better to go to a known destination (see Table 4).
+Table 4, RA & UA attitude repeated visit
+
+Prior visit of destination
+RA - averse
+RA-seeking
+Yes
+38%
+44%
+No
+62%
+56%
+ 
+UA - averse
+UA-seeking
+Yes
+38%
+42%
+No
+62%
+58%
+ 
+Further looking at the data, however, I find that on average risk averse people tend to spend more time planning the trip than risk reeking people (10 days vs 7 days). This effect is significant at 5% significance level. However, uncertainty averse and seeking people exhibit similar behavior (9 versus 10 days), the mean difference is not significant at 5% significance level, and thus there is no difference in the planning horizon for uncertainty averse and seeking travelers. 
+
+
+
+## Main results
+
+
+Results:
+
+
+``` {r echo=FALSE, message = FALSE}
+
+stargazer(export_files$stepwise$final_desktop_1,
+          export_files$stepwise$final_desktop_2,
+          export_files$stepwise$final_desktop_3,
+          export_files$stepwise$final_desktop_4,
+          export_files$stepwise$final_desktop_5,
+          type = "text",
+          digits = 2,
+          header=FALSE, omit.stat = "all",
+          dep.var.labels = c("log(MM)","log(Domains)","log(PV)","log(Time)","log(Length)"),
+          covariate.labels = c("Risk:seek","Uncertainty:seek","Risk/Uncertainty:seek",
+                               "Days active","D Purchase","D Micromoments","D Domains","D PageViews","D Time","D MM Length",
+                               "S1. 1 purchase","S1. 2 purchase","S1. 3+ purchase","S2. Primary purchase: Flight","S3. decision/partly","D1. Age","D1. Age Sq",
+                               "Q1. Dest: Asia (B:Eur)","Q1. Dest: NA (B:Eur)","Q1. Dest: SA (B:Eur)","Q1. Dest: AUS (B:Eur)","Q1. Dest: Africa (B:Eur)",
+                               "Q4. Plan horizon (Weeks)",
+                               "Q5.2. Advice of friends/rel","Q5.3. Tourist info office","Q5.4. Travel mag","Q5.5. Travel agent",
+                               "Q6.1. Online: Transport","Q6.2. Online: Accomm.","Q6.3. Online: Entert.",
+                               "Q7. Length: 3+ nights",
+                               "Q8. Visited before", "Q10. Numer of people",
+                               "Q11.1. Children (N)","Q11.2. Visited Fr/Rel (N)","Q11.3. Stayed at Fr/Rel (N)","Q11.4. Stayed at Hotel (N)","Q11.5. Group Trip (N)",
+                               "Openness (low)", "Extraversion (low)", "Neuroticism (low)", "Agreeableness (low)",
+                               "Asia x Travel Agent","NA x Travel Agent","SA x Travel Agent","AUS x Travel Agent","Africa x Travel Agent"
+          ),
+          order = c(1,2,42,3,4,5,6,12,7,8,
+                    9:11,13:21,23,
+                    27,24,28,22,
+                    25,29,26,
+                    30:32,
+                    33,37,34,36,35
+          ))
+
+```
+
+
+
+``` {r echo=FALSE, message = FALSE}
+
+stargazer(export_files$stepwise$final_mobile_1,
+          export_files$stepwise$final_mobile_2,
+          export_files$stepwise$final_mobile_3,
+          export_files$stepwise$final_mobile_4,
+          export_files$stepwise$final_mobile_5,
+          type = "text",
+          digits = 2,
+          header=FALSE, omit.stat = "all",
+          dep.var.labels = c("log(MM)","log(Domains)","log(PV)","log(Time)","log(Length)"),
+#          covariate.labels = c("Risk:seek","Uncertainty:seek","Risk/Uncertainty:seek",
+#                               "Days active","D Purchase","D Micromoments","D Domains","D PageViews","D Time","D MM Length",
+#                               "S1. 1 purchase","S1. 2 purchase","S1. 3+ purchase","S2. Primary purchase: Flight","S3. #decision/partly","D1. Age","D1. Age Sq",
+#                               "Q1. Dest: Asia (B:Eur)","Q1. Dest: NA (B:Eur)","Q1. Dest: SA (B:Eur)","Q1. Dest: AUS (B:Eur)","Q1. #Dest: Africa (B:Eur)",
+#                               "Q4. Plan horizon (Weeks)",
+#                               "Q5.2. Advice of friends/rel","Q5.3. Tourist info office","Q5.4. Travel mag","Q5.5. Travel agent",
+#                               "Q6.1. Online: Transport","Q6.2. Online: Accomm.","Q6.3. Online: Entert.",
+#                               "Q7. Length: 3+ nights",
+#                               "Q8. Visited before", "Q10. Numer of people",
+#                               "Q11.1. Children (N)","Q11.2. Visited Fr/Rel (N)","Q11.3. Stayed at Fr/Rel (N)","Q11.4. Stayed at #Hotel (N)","Q11.5. Group Trip (N)",
+#                               "Openness (low)", "Extraversion (low)", "Neuroticism (low)", "Agreeableness (low)",
+#                               "Asia x Travel Agent","NA x Travel Agent","SA x Travel Agent","AUS x Travel Agent","Africa x Travel #Agent"
+#          ),
+          order = c(1,2,42,3,4,5,6,7,8,
+                    9:12,13:21,23,
+                    27,24,28,22,
+                    25,29,26,
+                    30:32,
+                    33,37,34,36,35
+          ))
+
+```
+
+
+
+##Conclusion
+
+Based on the results I conclude that risk and uncertainty attitudes have an impact of online travel related behavior. I can confirm that the hypothesised relationship exists.
+
+
+Based on the results the following hypotheses are confirmed/rejected
+
+|    |Hypotheses             |||||
+|----|----------------------:|:-----------:|----:|:--------------|-----------|
+| H1 | Risk attitude        | ***Decreases*** the amount of | a. | Micromoments | *Rejected* |
+|    |                      |           | b. | Domains      | **Confirmed** |
+|    |                      |           | c. | Pageviews    | **Confirmed** |
+|    |                      |           | d. | Time         | **Confirmed** |
+|    |                      |           | e. | Lenght       | **Confirmed** |
+| H2 | Uncertainty attitude | ***Decreases*** the amount of | a. | Micromoments | *Rejected* |
+|    |                      |           | b. | Domains      | **Confirmed** |
+|    |                      |           | c. | Pageviews    | **Confirmed** |
+|    |                      |           | d. | Time         | **Confirmed** |
+|    |                      |           | e. | Length       | **Confirmed** |
+

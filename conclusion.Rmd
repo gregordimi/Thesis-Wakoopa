@@ -1,0 +1,74 @@
+---
+title: "discussion"
+author: "Grigor Dimitrov"
+date: "September 23, 2016"
+output: html_document
+---
+
+## Discussion
+
+The present study aimed at exploring the personality traits such as risk and uncertainty attitudes and their relationship with online travel behavior. The online travel behavior was viewed both from desktop and mobile perspective, in line with recommendations from @googletravel2014 and @Xiang2015. It is also observed that mobile online behavior is one of the major trends happening in the online travel industry, therefore, nowadays it is essential to review the consumer journey on every channel. The results suggest that the same personality traits have a different impact on desktop and mobile online travel behavior.
+
+The finding with regards to desktop online travel behavior is in line with the main hypotheses of the study. It has been found that risk seeking attitude (H1) decreases the aspect of online travel related behavior related to a number of travel related domains, pageviews on travel related websites, time spent on travel-related websites, overall length of travel micromoments, while the effect is not significant with regards to a number of travel micromoments. The uncertainty attitude has been found to influence a number of travel related domains, pageviews on travel related websites, time spent on travel related websites, while it does not have a significant relationship with micromoments and overall length of travel micromoments. These findings are in line with previous finds in the literature that information search is uncertainty reducing instrument [@urbany1989buyer]. The findings confirm the relationship between uncertainty and the extend of information search studied by @Quintal2010. However, the analysis also reveals that there is a relationship between risk attitude and the extend of information search in travel context, which contradicts to @Quintal2010. This finding is in line with the literature that information search is risk reducing instrument [@gemunden1985perceived]. The contradiction may come from the fact that @Quintal2010 uses self-reported data on different information sources used when making travel decisions. In a design, metrics on the extend of information searches such as time or pageviews cannot be accurately accessed.
+
+When it comes to mobile behavior the findings are surprising. The risk attitude hasn't been found to have a relationship with the online travel related behavior (in line with @Quintal2010) while the uncertainty attitude has been found to have an opposite direction of the effect i.e. uncertainty seeking behavior increases the extend of online travel information search. Furthermore, the interaction term between risk and uncertainty seeking attitude has a huge impact (e.g. more than 700% of time). Such a big fluctuations and unusual results can be explained by the fact that the sample size on mobile is really small 109 respondents and there is no indication what kind of mobile device is the source of data e.g. smartphone or tablet which leaves a big part of the variance in the error term. Furthermore, there is a measurement error when measuring time on mobile (explained in the limitations). Nevertheless, this difference is interesting because of the rising role of mobile in the online travel industry and its worth further investigation.
+
+With regards to big five personality traits, only a few effects found in previous research have been recognized. The desktop behavioral, suggest that the effect of scoring low on the factor "openness to experience" decreases the number of pageviews on travel related websites and the total time spent on them. These findings support the notion that "closed-mindedness" as opposite to "openness" is related to more reserved views towards new experiences. Being low in "consciousness" i.e. "carelessness" decreases the total time spent on travel related websites. Again, the intuition suggests that careless individuals would not spend more efforts obtaining information to decrease probabilities of undesired future outcomes compared to conscious ones.
+
+The findings from the mobile behavior are different. Low in personality trait "consciousness" increases the number of micromoments and travel domains. Low in "extraversion" increases the pageviews on travel related domains. Low in "agreeableness" decreases travel micromoments, travel domains, travel pageviews and time. This contradicts the notions that "antagonism" opposed to "agreeableness" is related to more skeptical and analytical minded individuals which would be expected to spend more time obtaining new information. Low in "Neuroticism" increases travel domains, travel pageviews, travel time and overall micromoment time. Again, these findings are on the opposite side of the intuition which suggest that more "emotionally stable" or "confident" individuals opposed to "neurotic" would be less likely to spend time gathering information and researching alternatives online.
+
+The results from the previous literature [@Jani2014] suggests that travel information search varies with the different factors except from "extraversion", and the online sources utilized for travel information search vary with the different factors except for "conscientiousness". One of the most obvious reason for the difference in the research methodology, as @Jani2014 utilized survey data for reporting online activities which are shown to be not particularly accurate [@Wakoopa2016]. However, as noted above, some of the findings are contra intuitive, therefore further research is needed in order to explore these relationships in details.
+
+
+## Contribution and Implications
+
+Behavioral data gives us an amazing capacity to understand the online behavior of the consumers as never before. Although the level of understanding of the consumers reached by the academia and practitioners is still great before the age of behavioral data, the capability of zooming into details of the real consumer behavior and the robustness of the insights are truly fascinating. Practically behavioral data empowers researchers to answer every question concerning the observable online behavior that comes to mind in a way beyond the capacity even of the consumer himself. Due to the complexity and fragmentation, the consumer is unable to recall the information in such rich details as when it is recorded. 
+
+Due to this fact, the relationship under investigation has not been investigated before in such a detailed manner. This research confirms the finding from previous research in the area that the attitude towards uncertainty, but not the risk is responsible for choosing a number of sources used for travel decision making. Our findings contribute to previous research through passive metering by investigating the time people spend on travel websites, as well as the efforts in terms of pageviews. The results from the analysis strongly confirm the hypotheses that both risk and uncertainty attitudes account for changes in time and pageviews spend desktop devices.
+
+This study contributes to 4 areas, it has been used as promotional material, methodologically to the area of behavioral research, to the stream of the literature of decision making under risk and uncertainty, to tourism research and makes managerial implications for better online travel related marketing activities.
+
+The findings serve as a tangible example of behavioral data employed in practice. The work has been used as promotional marketing material to promote the business of Wakoopa. The company offers technology for behavioral data collection. This work has been released as part of blogpost series: "How behavioral data sheds light on real consumers' travel planning behavior":
+
+* [**Part #1**](https://blog.wakoopa.com/how-behavioral-data-sheds-light-on-real-consumers-travel-planning-behavior-part-i-2/) 
+* [**Part #2**](https://blog.wakoopa.com/how-behavioral-data-sheds-light-on-real-consumers-travel-planning-behavior-part-ii/) 
+* [**Part #3**](https://blog.wakoopa.com/how-behavioral-data-sheds-light-on-real-consumers-travel-planning-behavior-part-iii/)
+
+The main contribution of the research is adding methodologically to the emerging stream of research in the behavioral observational research. The research explores unobservable attitudes of one's personality assessed via questionnaires in relation to a real worlds observational data. Even though it uses an established and well-known analysis techniques, the novelty in data collection techniques gives significant methodological contribution for practitioners and the academia.
+
+The research contributes to the area of behavioral economics more precisely in decision under risk and uncertainty. It expands the area in relation to of online travel related behavior. It confirms the notion ones that attitude toward risk and uncertainty play a significant role in decision making concerning travel related information search and that individuals with plausible attitude toward both constructs spend less time in planning whereas those more concerned with the risk and uncertainty, in general, are more careful planners.
+
+
+
+##Limitations & Recommendations
+
+1. Risk and uncertainty measurement. The risk and uncertainty attitudes have been measured using the shorted possible way for measurement assessing only the general attitude of these personality traits. Arguably there could be discrepancies between the general attitude and domain specific attitude. Therefore, the experiment can be reproduced using a more sophisticated measurement of risk and uncertainty attitudes such as gambles and lotteries as well as assessing perceived risks in travel related domains.
+
+2. Classification. The classification used in the research has been used as it is provided, however, it is possible to employ better classification algorithms providing better fragmentation of the travel related behavior. Therefore, for future research, I suggest the use of better classification.
+Micro-moment, the length of a micro-moment has been set to be 5 minutes without any reference or estimation whatsoever. There is a research that suggests how the best way cut-off point in order to measure user sessions can be estimated. Furthermore, we use the same cut-off point of 5 minutes across desktop and mobile device. As the activity of both type of devices largely differs it could be necessary to use different cut-off points per desktop and mobile. This would also mean that the comparison between desktop and mobile is harder as it is generally different.
+
+3. Multiple users per device. It is known that some desktop devices are shared in the households, therefore we are recording data streams from different users  and assessing these data as coming from a single user. Thus, the analysis of this data can be biased as we 1) cannot distinguish the different users and 2) cannot connect properly the survey data with the behavioral data.
+
+4. Time is inferred. The measurement cut-off point is 2 seconds anything shorter than two seconds is not recorded. Crosstab browsing on desktop devices cannot be accessed. There is a measurement error on mobile devices which makes it possible to have events with time zero.
+
+5. Selection bias. One should not overlook the possibility of selection bias as the people who agree to be tracked can be arguably different than the ones who are more privacy conscious and would not agree to share such information even for research purposes. Selection bias states that the selected sample who agrees to participate in the research may yield different characteristics than the sample of interest drawn from the general population.
+
+6. Programming. The program written to process and analyze the data contains several thousand lines of code. Developing such a code in an absence of a quality assurance team and/or a proper quality assurance procedures is prompt to errors.
+
+7. Survey measurement. There are two issues related to the survey methodology. First, the income scale was related to individuals' income, while the questions have been asked with regards to household income. This prevented me from using this variable in the research design. Second, the fourth item from the BFI has been wrongly included as it contains two items instead of one. Yet, they are both from the same traits, thus the impact of this error is potentially small.
+
+
+
+
+ 
+
+
+ 
+
+
+	
+
+
+
+
+

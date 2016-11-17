@@ -1,0 +1,71 @@
+---
+title: "Master Thesis"
+author: "Grigor Dimitrov"
+date: "`r format(Sys.time(), '%d %B, %Y')`"
+output:
+  pdf_document:
+    highlight: tango
+    number_sections: yes
+    toc: yes
+header-includes: \usepackage{placeins} 
+  \usepackage{dcolumn} 
+  \usepackage{fancyhdr} 
+  \usepackage{setspace}
+  \usepackage{chngcntr} 
+  \usepackage{microtype} 
+  \onehalfspacing 
+  \counterwithin{figure}{section}
+  \counterwithin{table}{section} 
+  \usepackage{rotating, graphicx}
+linkcolor: black
+geometry: margin = 1.2in
+fontsize: 12pt
+urlcolor: black
+bibliography: thesis.bib
+abstract: "This paper investigates the relationship between consumers' personality traits and the extent travel related online behavior.  The results prove the positive relationship between general risk and general uncertainty attitudes and online travel related behavior associated with \"unique domains\", \"time\" and \"pageviews\". While the results on mobile show the opposite direction of the effect associated with uncertainty attitude and no significant relationship between the investigated metrics and risk attitude. The novelty of the paper lays in the methodological contributions more familiar in the practice as \"data fusion\", the methodology utilizes behavioral data to gather information about the observable online behavior and survey data to assess consumers' unobservable personality traits. Finally, the results reveal a significant difference between desktop and mobile online behavior with should be further investigated."
+---
+
+
+```{r echo=FALSE, message = FALSE}
+library(stargazer)
+library(lmtest)
+library(sandwich)
+```
+
+\newpage
+
+# Introduction
+
+```{r child = 'introduction2.Rmd'}
+```
+
+\newpage
+
+# Literature review
+
+```{r child = 'literature2.Rmd'}
+```
+
+\newpage
+
+# Methodology
+
+```{r child = 'methodology3.Rmd'}
+```
+
+\newpage
+
+# Results
+
+```{r child = 'results2.Rmd'}
+```
+
+\newpage
+
+# Conclusions
+
+```{r child = 'conclusion.Rmd'}
+```
+
+
+# References

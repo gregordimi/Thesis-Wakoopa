@@ -1,0 +1,78 @@
+---
+title: "Literature review"
+author: "Grigor Dimitrov"
+date: "September 27, 2016"
+bibliography: thesis.bib
+output: word_document
+---
+
+##Travel planning and information search
+
+
+Tourism related information search and planning has been a widely researched topic. In a paper exploring longitudinal data for 12 years, <!-- text -->@Xiang2015 identified as a key trend number one that the internet penetration among consumers using the Internet for travel planning already reached the level of saturation. However, in a research exploring the online behavior from a generation perspective, [@Kim2015] noted that there is no sufficient amount of research with regards to how different segments of consumers behave online and use the internet for travel planning. Internet search behavior in tourism context has been examined primarily from the perspective of demographic variables, motivation and prior knowledge about the destination [@Jani2014].
+
+Xiang et al. [-@Xiang2015] turn special attention on travel planning process as a specific type of information search that is an important component of the decision making for tourism related decisions during which consumer are choosing their destinations and forming their expectations. There is a substantial amount of research that looks at travel planning from different perspectives some aim to identify the characteristics of the travelers’ demographic characteristics (ref) other investigate the way travelers are conducting purchases and navigate in the information stream (ref)<!-- REFERENCE --> and recently social media and its influence on travel has been on focus of the researchers as well (ref)<!-- REFERENCE -->.
+
+From practitioner standpoint, the more consumers are being active online the more prerequisites this creates for the tourism stakeholders marketeers to reach them during their decision making process.  Therefore, identifying the travel planning process i.e. the decision making journey is a critical step for the brands to intervene and influence the consumers in their direction, identifies Google travel survey (2014)<!-- REFERENCE -->. Practitioners define that the decision making process related to the tourism as an array of micro moments which often are not even conscious to the consumers. (Reference to google travel survey) Micro moment is essentially a user session with particular goal of obtaining information or committing to a purchase. Again the authors stress out on the importance of mobile.
+
+For the purpose of this research it is important to define the main components of the travel planning. In a meta-analysis, <!-- text -->@Jun2007 point out that the consensus among researchers that travel planning cannot be simplified to a single goal oriented rational action but it is rather viewed as a complex task involving multiple goals and decisions around the different goals and characteristics of the trip. The authors define a conceptual model for travel planning which has three main sequential interrelated components, pre-trip, during trip and post-trip. This research focuses on pre-trip phase. Pre-trip phase itself consists of information search and planning (decision making), furthermore, travel related purchases also occurs at the end of this phase as well as during the trip itself.
+
+@Jun2007 define travel plan as a complex decision involving an assessment of multiple alternatives organized around the travel goals in mind. The planning process includes setting goals and considering alternatives in order to achieve that goals including an evaluation of different alternatives’ outcomes. Planning is dependent on the all information search behavior, utilization of the obtained information, purchase behavior and activities including past experience. 
+@Pan2006 defines vacation planning over the internet as an interaction between the user and the “online space” related to destinations and tourism. The online space contains content provided by diverse sources and the technology that facilitates the communication. User’s “situation, knowledge and skills” combined with the “online space” contribute to the effective search.
+
+It is important to be noticed that trip planning is an important and enjoyable part of the vacation experience itself [@Stewart1999] and at is likely to be high costs and high involvement decision [@Bonn1998]. Furthermore, travel information search behavior explains travel purchase behavior  <!-- FIND IT -->(Woodside and MacDonald (1994)). <!-- -->@Quintal2010 review numerous aspect of from which information search has been researched including amount of search, number of sources, the search process, involvement, socio-demographic differences, culture etc.
+
+<!-- -->@Pan2006 review the consumer vacation planning process from micro level perspective. The research is motivated by the fact that previous research has been mostly focused on exploring planning and information search on macro level i.e. motivation, need, determinants and outcomes. This research from micro level perspective focuses on a “snapshot” of travel planning where subjects make choices regarding a hypothetical holiday trip to San Diego. Using such setting it was possible to observe different chapters containing many episodes on how consumers adapt in their online search and come up with final decision.
+
+In conclusion information search behavior is an important phase of the of the overall tourism behavior and more specifically travel planning. For tourism stakeholder perspective it is an crucial moment of where the consumer can be influenced with effective communication strategies and communication systems.
+
+##Risk and uncertainty
+
+Risk attitudes are a central part of the economic theory. Classical economic theory of decision under risk states that the risk is related to the probability of the occurrence of specific outcome. For example according to expected utility a prospect with probability P to win x amount of money opposed to 1-P to win nothing, will be evaluated as follows: p.u(x)+(1-p)u(0) where u is the utility function of money. Risk attitudes are defined as follows, risk aversion is an attitude which is manifested by the preference of the sure outcome over a prospect with higher expected value that involves risk. Whereas, risk seeking attitude will occur when the prospect is preferred over the sure amount.
+Later economic theory evolves by distinguishing individual level probability weighing and utility weighting by taking into account different psychological variables. <!-- FIND IT -->Kahneman and Tverski (1979) propose “Prospect theory” to explain choices among risky prospects that are inconsistent with the standard economic theory. In these recent developments the risk attitudes evolve. In order to explain decision making under risk scholars explore choices involving different amount of risk (high risk and low risk) and associated with outcome involving different monetary values (again high and low) as well gains or loses.
+
+
+In a paper focused on risk measurement in consumer research <!--  -->@Mandrik2005 summarize that the measurement of risk attitudes typically has been assessed in three ways. The first method involved “choice dilemmas” where subjects are presented with several scenarios and asked for their preference between two courses of action, this results in computing an overall score which is used to determine respondents’ risk attitude. The second method involves gambles. Subjects are asked to choose an amount in order to participate in a gamble.  Finally, researchers use self-reported measures. These include creation of different scales that are measure risk and uncertainty in specific decision situations. The authors validate a novel self-reported scale which measure general risk attitude as valid psychometrical measure. The construct proposed by Mandrik & Bao has been utilized in this research as it provides shorter and simple manner of assessing risk attitudes. (argue that objective of the paper is to keep low length of the survey as low as possible)
+
+##Risk and uncertainty in tourism
+
+One of the reasons researchers claim to cause the extensive information search is risk and uncertainty minimization. <!--  -->@Stewart1999 attribute uncertainty as an implicit and universal characteristic of every planning process. Furthermore, the authors argue that in order to handle uncertainty the travelers prepare more than one plan for their trips. <!-- FIND IT -->(Sweeney et al., 1999) point out that consumers who are more sensitive to risk and uncertainty engage in more extensive search in order to avoid them. <!-- FIND IT -->(Sirakaya and Wood- side, 2005 claim that because of the intangible nature of tourism products the uncertainty in tourism is higher than comparing to other products or services.
+Based on this one of the hypothesis of this research has been formed, namely that the extend of information search is dependent on the attitudes toward risk and uncertainty.
+
+An important remark related to risk and uncertainty is the difference between both constructs. The difference between them lays in the probabilities of their outcomes, while risks has been associated outcomes with known probabilities this is not the case with the uncertainty. <!--  -->@Quintal2010 are investigating the difference between risk and uncertainty on country level using <!-- FIND IT -->Hofstede’s (1980) uncertainty avoidance index (UAI) and risk scale measurement on Tourist’ information search. The team claims that many other papers do not make the distinction and this is especially problematic when researchers are using country UAI scores to explain individual level behavior because individuals differ with regards to their attitudes of risk and uncertainty.
+
+<!--  -->@Quintal2010 explain the relationship between uncertainty and risk in tourism and information search in the following way. In the early stages of their research consumers search for information extensively and the outcomes are more associated with uncertainty because the rate of occurrences of certain treating events is not known. In a later stage of decision making process, when travelers have already selected possible alternatives the risk attitude is more likely to have influence as consumer can assign relative probabilities i.e. alternatives are being compared to one another providing a reference point.
+
+##Big Five Factors (BFF)
+
+Personality is a temperament or person’s inherent qualities of mind and strategies according to which one behaves, dispositions and behavioral patterns that are stable across time and can be used to characterize one’s behavior. The trait perspective has been frequent utilized in consumer research because their ease of application as a self-reported measure and the measurement outputs can be easily applied in statistical analysis. [@Jani2014]. 
+
+BFF has been proposed as a fundamental lexical hypothesis by Galton in 1884 (Golberg 1993), which is a language taxonomy of human temperament based on adjectives describing different personality traits. The theory was put into practice by Alport and Odbert (1936) and it has been grately developed ever since, leading into the construction of five broad factors. BFF are based on factor analysis where a large group of traits is shown to be correlated and grouped into five universal traits. BFF are openness to experience, conscientiousness, extraversion, agreeableness and neuroticism.
+
+Openness to experience is related to the degree of curiosity, inventiveness, adoption of novelty on the one hand and consistency and cautiousness on the other.  That is, persons with high openness tend to be open-minded, adventurous while low openness can describe individuals that are more pragmatic. Conscientiousness reflects on the tendency for one to be organized, non-spontaneous, organized and efficient. Extroversion is related to traits such as outgoing personality, sociability, talkativeness. Personalities exhibiting low extroversion on the other hand, can be perceived as less open and reserved. Agreeableness is described as being more compassionate and cooperative. Moreover, it measures whether a person can be trusted or not and if they are well-tempered. High agreeableness personalities can be seen as more naïve, while low are seen as more dominative and competitive. Finally, neuroticism explores the emotional stability of individuals. That is, a high need for stability results in individuals who are clam and stable, while low need for stability can describe emotionally unstable individuals
+
+##Big Five and Tourists’ internet search
+
+<!--  -->@Jani2014 address the research question whether BFF can be used as predictor of internet search behavior in terms of sources of information and the extent information sought. Using self-reported measures of type of internet information search and channels used, the authors confirm that personality traits can be used as a predictor of information search behavior.
+
+
+
+## Hypotheses
+
+Based on the literature review above I hypothetise the following relationship between the obseved behavior and the unobservables collected via survey data:
+
+
+|    |Hypotheses             ||||
+|----|----------------------:|:-----------:|----:|:--------------|
+| H1 | Risk attitude        | *Decreases* the amount of | a. | Micromoments |
+|    |                      |           | b. | Domains      |
+|    |                      |           | c. | Pageviews    |
+|    |                      |           | d. | Time         |
+|    |                      |           | e. | Lenght       |
+| H2 | Uncertainty attitude | *Decreases* the amount of | a. | Micromoments |
+|    |                      |           | b. | Domains      |
+|    |                      |           | c. | Pageviews    |
+|    |                      |           | d. | Time         |
+|    |                      |           | e. | Length       |
+
+

@@ -1,0 +1,159 @@
+---
+title: "results"
+author: "Grigor Dimitrov"
+date: "September 23, 2016"
+output: pdf_document
+---
+
+## Survey Data
+
+The original data consisted of 495 observations. Before proceeding with analysis, the data was cleaned based on several considerations. Namely, I looked at whether 1) respondents were speeding throughout the survey, 2) subjects were flatliners, e.g. if they have answered the grid question with the same answer, and 3) if they had low activity less than 1000 observation in the behavioral data. 4) if the attempted to participate the survey more than once. The final dataset thus consists of 426 observations.
+
+Looking at the demographic characteristics, we see that there is an equal split between males and females. Seeing the distribution among age, the population above 50 years old is  overrepresented, accounting for 59% of the sample. In terms of income, the distribution is normal, most of the subject indicated yearly income between 33.000 – 66.000 euro.
+
+All subjects were actively involved in the trip planning as the main decision maker or contributed to the decision, subject who didn't participate in the decision making were screened out. The business trip only travelers were screened out as well, those left in the sample are either leisure or leisure and travelers. Finally, we see that the majority of respondents indicated they have booked both flight and accommodation.
+
+The next part of the survey explored the trip characteristics with regards to their general planning, online behavior, and destination. These data points were used as control variables for the analysis. On average it took respondents 9 weeks to plan the whole trip, for about 40% it took between 1 and 4 weeks to plan everything, while 15% indicated they needed more than 20 weeks of planning.
+
+The majority (80%) visited countries within Europe, and 57% have not visited the country before. On average, people who have visited the country before went there for the 4th time. Typically together were traveling 2 people, the largest travel group consisted of 14 people and they have spent approximately 9 nights away from home. About 34% of the respondents indicated they have spent more than 10 days. Only 20% of the subjects have stayed with relatives.
+
+The majority of subjects researched for the trip using the Internet, but many have also asked for advice from friends or relatives or approached a travel agent. Moreover, the internet is widely used for booking accommodation and not so much for traveling or booking "entertainment" online.
+
+### Risk and uncertainty
+
+For understanding risk and uncertainty attitudes, the seven-item scale was analyzed using exploratory factor analysis. According to the analysis results, I cannot accept the hypothesis that two factors are sufficient to explain the seven-item scale. However, exploring further, the results show that the factor loadings of the different variables have the highest loadings on the assumed two underlying factors i.e. risk and uncertainty. Furthermore, running factor analysis when assuming 3 factors results in separating item #4 as a distinct factor on its own with relatively low factor loading. According to <!-- -->@yong2013beginner choosing too few factors may lead to leaving out important variance out of the analysis. However, I accept the high factor loadings onto the two assumed factors as a sufficient reason to continue the analysis with two factors. Namely, items 1 to 3 accounting for underlying risk attitude and items 4 to 7 accounting for attitude towards uncertainty. Factor analysis results on risk and uncertainty items are available in the *Appendix 1: Factor analysis results*
+
+### BIG5
+
+Running exploratory factor analysis on BIG5 items resulted in confirming the initially assumed personality traits. Furthermore, based on the results we can accept the hypothesis that 5 factors are sufficient to explain the variance of the 11 item scale. Factor analysis results on BIG5 items are available in the *Appendix 1: BIG5*
+
+Next, with the aid of factor analysis respondents were grouped into 2x2 groups based on the mean score of the items per each factor: 1) risk "averse" and "seeking" and 2) uncertainty "averse" and "seeking". With regards to "big five", the respondents have also being allocated into two groups based on the mean score of items accounting per each factor i.e. "high" and "low". The procedure has been adopted based on the approach from @Jani2014.
+
+
+It is interesting to observe some of the descriptive statistics which can already provide some insights on what the relationships between people's risk and uncertainty attitude and their travel behavior based on the survey data.  First of all, the majority of subjects are risk averse and uncertainty averse. The subject being risk seeking account for 30% of the population, while the uncertainty seeking are 40%. 
+
+``` {r echo=FALSE, results = 'asis', message = FALSE}
+
+stargazer(summary(as.factor(export_files$rawsurvey$RA)), type="latex", title = "Risk attitude", header=FALSE)
+stargazer(summary(as.factor(export_files$rawsurvey$UA)), type="latex", title = "Uncertainty attitude", header=FALSE)
+
+
+
+```
+
+Interestingly enough, given the data, it is observed that risk averse and uncertainty avoidant subjects actually prefer to go to a destination they haven't visited before, while risk and uncertainty seeking respondents have a slightly higher preference to go to a known destination. Further looking at the data, I find that on average risk averse people tend to spend more time planning the trip than risk seeking people (10 days vs 7 days). This effect is significant at 5% significance level. However, uncertainty averse and seeking people exhibit similar behavior (9 versus 10 days), the mean difference is not significant at 5% significance level, and thus there is no difference in the planning horizon for uncertainty averse and seeking travelers. 
+
+## Main results
+
+### Desktop Data
+
+Looking at a table *Full model: Desktop, robust*, I can say that most of the hypotheses of this paper have been confirmed. The table with the main results is available below under *Table 5.3: Full model: Desktop, robust* while the table with the full results is available in the Appendix #1 *Table 5: Full model: Desktop, robust*
+
+First, looking at the effect of risk seeking attitude towards travel behavior, I see that risk seeking attitude decreases individuals' activities related to travel behavior such as travel domains (log(TD)), travel pageviews (log(TDPV)), travel time (log(TT)) and total travel-related micromoment length (log(TL)).For example, risk seeking individuals tend to use 23% fewer travel domains on average compared to risk averse individuals, ceteris paribus. Moreover, risk seeking individuals spend 46% less time and have 37% fewer pageviews on travel related domains on average compared to risk averse individuals, ceteris paribus. Finally, when it comes to the two variables accounting for micromoments, we see that risk seeking attitude doesn't have a significant effect over the total number of travel related micromoments, while when it comes to overall micromoment time (containing travel related activity) it does have a significant effect. On average, risk seeking attitude decreases the overall time of micromoments by 26% compared to risk averse attitude, ceteris paribus. 
+ 
+Second, looking at the effect of uncertainty seeking attitude towards travel behavior, I see that uncertainty seeking attitude decreases individuals' activities related to travel behavior such as travel domains (log(TD)), travel pageviews (log(TDPV)) and travel time (log(TT)). Uncertainty seeking individuals tend to use 25% fewer travel domains on average compared to uncertainty averse individuals, ceteris paribus. Moreover, uncertainty seeking individuals spend 37% less time and have 34% fewer pageviews on travel related domains on average compared to uncertainty averse individuals, ceteris paribus. Finally, when it comes to the two variables accounting for micromoments, we see that uncertainty seeking attitude doesn't have a significant effect over both the total number of travel related micromoments and overall micromoment time (containing travel related activity).
+
+Third, the interaction term between risk seeking and uncertainty seeking attitudes has a significant effect only on time spent on travel-related websites.  Interestingly, being both risk seeking and uncertainty seeking increases the time spent on travel related domains by 76%, ceteris paribus. 
+
+Exploring the effect of personality traits on online travel behavior the following effects are revealed. Scoring low on personality trait "Openness to experience" decreases the number of pageviews on travel related websites by 32% and the total time spent on travel-related websites by 33%, ceteris paribus. Scoring low on personality trait "Consciousness" decreases the total time spent on travel-related websites by 20%, ceteris paribus.
+
+
+\newpage
+
+
+``` {r echo=FALSE, results = 'asis'}
+
+stargazer(coeftest(export_files$stepwise$final_desktop_1, vcovHC( export_files$stepwise$final_desktop_1, type = "HC1")) ,
+          coeftest(export_files$stepwise$final_desktop_2, vcovHC( export_files$stepwise$final_desktop_2, type = "HC1")) ,
+          coeftest(export_files$stepwise$final_desktop_3, vcovHC( export_files$stepwise$final_desktop_3, type = "HC1")) ,
+          coeftest(export_files$stepwise$final_desktop_4, vcovHC( export_files$stepwise$final_desktop_4, type = "HC1")) ,
+          coeftest(export_files$stepwise$final_desktop_5, vcovHC( export_files$stepwise$final_desktop_5, type = "HC1")) ,
+          dep.var.labels = c( paste("D", c("log(MM)", "log(TD)", "log(TDPV)", "log(TT)", "log(TL)"))),
+          multicolumn = FALSE,
+          omit.stat = "all",
+          title = "Full model: Desktop, robust",
+          report=('vc*p'),
+          order = c(1,2,32,3,4:8),
+          keep = c("seeking","act_","_act","d_purchase"),
+          covariate.labels = c("Risk Seeking","Uncertainty Seeking","Risk(x)Uncertainty: Seeking",
+                               "Days active","D Purchase","D Micromoments","D Domains","D PageViews","D Time","D MM Length"),
+          font.size = "tiny",
+          header=FALSE,
+          digits = 2,
+          type="latex")
+```
+
+
+
+### Mobile data
+
+Looking at the table *Full model: Mobile, robust*, I see a big difference in respondents behavior compared to the desktop behavior. Most of the hypotheses with regards to the mobile behavior of this paper have not been confirmed. The table with the main results is available below under *Table 5.4: Full model: Mobile, robust* while the table with the full results is available in the Appendix #1 *Table 6: Full model: Mobile, robust*
+
+First, looking at the effect of risk seeking attitude I do not observe any significant relationship with the dependent variables. 
+Second, looking at the effect of uncertainty seeking attitude towards travel behavior reveals some surprising results. Uncertainty seeking attitude increases individuals' activities related to travel behavior such as travel micromoments (log(MM)), travel domains (log(TD)), travel time (log((TT)) and overall micromoment time (log(TL)). 
+
+Third, on the other hand, the interaction term between risk seeking and uncertainty seeking attitudes decreases greatly individuals' activities related to travel behavior such as travel micromoments (log(MM)), travel domains (log(TD)), travel time (log((TT)) and overall micromoment time (log(TL)). 
+
+Forth, scoring low on personality trait "Consciousness" increases the number of micromoments by 60% and travel domains by 53%%, ceteris paribus. Scoring low on "Extraversion" increases the pageviews on travel related domains by 88%, ceteris paribus. Scoring low on "Agreeableness" significantly decreases travel micromoments (log(MM)), travel domains (log(TD)), travel pageviews (log((TP)) and travel time (log((TT)). Scoring low on "Neuroticism" increases travel domains (log(TD)), travel pageviews (log((TP)), travel time (log((TT)) and overall micromoment time (log(TL)). 
+
+
+\newpage
+
+``` {r echo=FALSE, results = 'asis'}
+stargazer(coeftest(export_files$stepwise$final_mobile_1, vcovHC( export_files$stepwise$final_mobile_1, type = "HC1")) ,
+          coeftest(export_files$stepwise$final_mobile_2, vcovHC( export_files$stepwise$final_mobile_2, type = "HC1")) ,
+          coeftest(export_files$stepwise$final_mobile_3, vcovHC( export_files$stepwise$final_mobile_3, type = "HC1")) ,
+          coeftest(export_files$stepwise$final_mobile_4, vcovHC( export_files$stepwise$final_mobile_4, type = "HC1")) ,
+          coeftest(export_files$stepwise$final_mobile_5, vcovHC( export_files$stepwise$final_mobile_5, type = "HC1")) ,
+          dep.var.labels = c( paste("D", c("log(MM)", "log(TD)", "log(TDPV)", "log(TT)", "log(TL)"))),
+          multicolumn = FALSE,
+          omit.stat = "all",
+          title = "Full model: Mobile, robust",
+          report=('vc*p'),
+          order = c(1,2,34,3,4:8),
+          keep = c("seeking","act_","_act"),
+          covariate.labels = c("Risk Seeking","Uncertainty Seeking","Risk(x)Uncertainty: Seeking",
+                               "Days active","D Micromoments","D Domains","D PageViews","D Time","D MM Length"),
+          font.size = "tiny",
+          header=FALSE,
+          digits = 2,
+          type="latex")
+```
+
+## Conclusion
+
+Based on the results I conclude that risk and uncertainty attitudes have an impact of online travel related behavior. I can confirm that the following hypothesized relationships exist. 
+
+Based on the anaysis the following hypotheses are confirmed/rejected with regards to consumers' **Desktop** activity:
+
+|    |Hypotheses             |||||
+|----|----------------:|:----------------:|--:|:-----------|-----------------|
+| H1 | Risk attitude        | ***Decreases*** the amount of | a. | Micromoments | *Rejected* |
+|    |                      |           | b. | Domains      | **Confirmed** |
+|    |                      |           | c. | Pageviews    | **Confirmed** |
+|    |                      |           | d. | Time         | **Confirmed** |
+|    |                      |           | e. | Lenght       | **Confirmed** |
+| H2 | Uncertainty attitude | ***Decreases*** the amount of | a. | Micromoments | *Rejected* |
+|    |                      |           | b. | Domains      | **Confirmed** |
+|    |                      |           | c. | Pageviews    | **Confirmed** |
+|    |                      |           | d. | Time         | **Confirmed** |
+|    |                      |           | e. | Length       | *Rejected* |
+
+
+
+Based on the anaysis the following hypotheses are confirmed/rejected with regards to consumers' **Mobile** activity:
+
+|    |Hypotheses             |                              |    |              |                      |
+|----|----------------:|:----------------:|--:|:-----------|-----------------|
+| H1 | Risk attitude         |***Decreases*** the amount of | a. | Micromoments | *Rejected*           |
+|    |                       |                              | b. | Domains      | *Rejected*           |
+|    |                       |                              | c. | Pageviews    | *Rejected*           |
+|    |                       |                              | d. | Time         | *Rejected*           |
+|    |                       |                              | e. | Lenght       | *Rejected*           |
+| H2 | Uncertainty attitude  |***Decreases*** the amount of | a. | Micromoments | **Opposite effect**  |
+|    |                       |                              | b. | Domains      | **Opposite effect**  |
+|    |                       |                              | c. | Pageviews    | *Rejected*           |
+|    |                       |                              | d. | Time         | **Opposite effect**  |
+|    |                       |                              | e. | Length       | **Opposite effect**  |
+
+In the next chapter, the results are discussed thoroughly.

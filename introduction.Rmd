@@ -1,0 +1,77 @@
+---
+title: "Introduction"
+author: "Grigor Dimitrov"
+date: "September 27, 2016"
+output: pdf_document
+---
+
+In the last few years we created 90% of the world’s data, this claim has been made in 2013 and it still consistent today. More precisely it is estimated that every two years in the last three decades the amount of data increases by ten times.  <!-- ref -->@chatfield_2016 . The advantages of such “big data” include possibilities to uncover “heterogeneities and subtle population patterns” which are difficult to obtain using self-reported data <!-- ref -->@fan2014challenges. However, “big data” has been underutilized due to computational and statistical challenges @ammu2013big @tole2013big @labrinidis2012challenges. Moreover, @nunan2013market claim that there are high costs associated with analyzing and storing big data.
+
+
+## Online behavioral data
+
+The survey questionnaires are the main source of data for market research. Since the emergence of Web 2.0, the online survey made its way as it is a cheap and convenient form or data collection. With the increased penetration of the internet, there were more people online and this availability gave survey market research a huge reach. However, 20 years ago when the survey plunged our economic behavior wasn’t focused that much online and the Internet was used mainly for information purpose (reference).
+
+More than anytime nowadays everything happens online, our decision-making process is reflected online and online we can observe and capture information with ease. Consequently, there is an increasing availability of data. With passive data collection technologies, we can capture all of the online consumer behavior. Behavioral data which is more accurate in terms of describing actual behavior i.e. information gathering, research of alternatives and transactions which are the ultimate reflection of preference. Survey data is more powerful to collect information about respondents’ attitude, motivation, and opinion (reference). 
+
+The both types of data sources have their limitation and researchers are utilizing either one of them separately, however, up to date, there is a limited amount of research that combines both sources of data. By utilizing passive data collection panels this project has a rare opportunity to match an actual online behavior with a subject behind it and to send out questionnaires in order to access information that is not accessible via observational data.
+
+The main motivation of the paper lays in the metodological contributions. Namely, utilization of observable online behavioral data collected via passive tracking technology regresses over subjects' unobservable characteristics collected via online questionnaire. 
+
+
+
+##Tourism and The Web
+
+ Tourism is highly competitive and fragmented market. It has been disrupted by the Internet at large, the disruption process has started with the emergence of the Internet and continues today. We are witnessing dynamic segments of consumers emerged because of the technological advancements with constantly changing needs [@Xiang2015]. Furthermore, there is an increasing availability of options and all sorts of services bringing the consumers and offers closer together manifesting the ongoing process of disintermediation. Xinag at al. [-@Xiang2015] notes that there is growing “bifurcation” or a split among the traditional online travelers to users of traditional travel products and people how seeking deeper and authentic experiences. The authors point out that understanding how contemporary travelers use the internet is an important foundation for building successful communication strategies by the business stakeholders. The importance of the internet has been attributed to three main factors, the extensive amount of travel related information (ref)<!-- REFERENCE -->, the development of social networks and travel related social networks where user can exchange travel experiences (ref) and the mobile computing, smartphones in particular (ref)<!-- REFERENCE -->.
+
+## Personality traits
+
+Big five inventory (BFI) is the most well-known and established factor structure to measure personality (Denissen, Geenen, van Aken, Gosling, & Potter, 2008). It has been validated on many occasions and widely utilized by researchers creating prerequisites to comparing finding across different studies. Another important factor for the popularity of BFI is the fact they are freely available to use along with their validated translations in many languages. BFI consists of Extraversion, Neuroticism, Conscientiousness, Agreeableness and Open to experience. These five factors are shown to be the main factors that drive the human behavior, appear in different cultures (Mowen 2000 are considering them universal), are relatively stable across the lifetime of subjects and have strong predictive validity. (reference). 
+
+Researchers using BFI often aim to measure big five personality dimensions using as less as possible items which lead to the development and validation of short scales of BFI (reference) shorter than the 44 item scale initially proposed by (reference).
+
+Personality traits and tourism
+
+According to (Leung & Law, 2010) the usage of personality traits in travel related literature appears to be low even though the academic agreed upon their value in Marketing domain (Baumgartner, 2002). In tourism domain, BFI has been examined with regards to, general travel behavior, the undertaken activities in the travel destination, with relationship of adventure tourism, pilgrim tourism (Jani, 2014). 
+
+Personality traits and tourism information search
+
+There are two articles researching internet search behavior from the the perspective of BFI. Jani, (2011) proposes a model relating information needs and tourist information behavior from the perspective of BFI and travel personality. They define tourists’ information needs as reasons for collecting information and information search behavior as breadth and depth of information sources consumers use for obtaining information.
+
+Furthermore, Jani et al. (2014), research the relationship between BFI and internet search behavior. Using self-reported survey data, they observe that travel related information sought online varies with regards to the different personalities. Furthermore, the authors conclude that some of the factors from the BFI can improve the information search behavior predictability.
+Risk attitude
+Risk attitude and tourism
+Decisions related to travel involve a lot of risk and uncertainties. In an exploratory analysis, Roehl & Fesenmaier (1992) identify seven types of perceived risks related to pleasure travel. Namely, equipment risks, financial risks, physical risks, psychological risks, satisfaction risks, social risks and time risks. The team also refers to numerous studies suggesting the fact that perceptions toward risk are situation specific thus they should be studied with the appropriate measure for the specific context. 
+
+Lepp & Gibson (2003) look at the general perceptions or risk and uncertainty from the perspective of travel motivations for novelty against familiarity. Their findings suggest that familiarity seekers are more risk averse comparing to less risk averse novelty seekers.
+Risk attitude and tourism information search
+Quintal et al. (2010) examine the impact of risk and uncertainty avoidance on tourist information search. The team distinguishes risk from uncertainty and examine whether the two constructs have different impact on the information search. Their findings suggest that uncertainty avoidance has a positive significant relationship with the extent of information search while this is not valid for the risk avoidance.
+
+## Research question
+
+This research explores the relationship between big five personality traits, risk attitudes and information search behavior in tourism context while controlling for trip characteristics and demographics. The paper offers unique contribution from methodological perspective as it is going to utilize behavioral datasets of the actual subjects’ online behavior with a combination of self-reported non-observable data. Up to date, there is a limited amount of literature exploring these constructs in relationship to one another and in a relationship with non-self-reported metrics of information sought.
+
+> This research aims to answer the following research questions:
+
+> What is the relationship between the different risk attitudes and the activity on travel realted domains?
+> What is the relationship between the different uncertainty attitudes and the activity on travel realted domains?
+
+The following measures are available for activity on travel realted domains:
+
+* total number of travel related micromoments
+* depth of search (total number of page views)
+* breadth of search (total number of sources/websites used while searching)
+* total time spent on websites associated with tourism related content
+
+Doe to problems associated with time measurement on mobile there is an additinal measurement:
+
+* total lenght of travel related micromoments
+
+> Additional research:
+
+> What is the relationship between the different personality traits and the activity on travel realted domains?
+
+
+This research contributes with combining literature streams that have not been researched jointly i.e. BFI, decisions under risk and uncertainty and information search behavior in tourism domain.
+Furthermore, this research offers unique contributions in terms of data, i.e. combination self-reported non-observable data with behavioral (observable) data.
+The finding will be relevant to the current landscape of online products related to tourism because there an increasing availability of data from consumers’ profiles which can be used to profile respondents in order to deliver personally customized tourism products. Personalization is a key element of the competition of the online tourism related services.

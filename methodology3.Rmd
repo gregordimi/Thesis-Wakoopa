@@ -1,0 +1,159 @@
+---
+title: "methodology"
+author: "Grigor Dimitrov"
+date: "September 23, 2016"
+---
+
+
+
+##Introduction
+
+The data utilized for this research has been collected from panelists who participate in a large consumer panel in the Netherlands. The data has two main components, behavioral data, and survey data. The methodological section of this paper explains the sampling, data collection and analysis procedures that have been conducted, in the following way.
+
+* Panel and sampling. Sampling based on behavioral data. A sample of respondents has been pulled out of the behavioral dataset based on their online behavior on popular tourism related websites in the Netherlands.
+* Survey. An online survey has been administered among the sampled panelists to reveal the "unobservables" from the perspective of the available behavioral data. Namely, these include data points related to trip characteristics associated with respondents' latest tourist related purchases as well as the question regarding  their personality. The code related to this step is available in *Appendix #2 Code. CHUNK #5*, *Appendix #2 Code. CHUNK #6*
+* Data processing.The full behavioral data of the respondents who successfully completed the survey has been sampled out of the full behavioral panel dataset. The code related to this step is available in *Appendix #2 Code. CHUNK #1*, *Appendix #2 Code. CHUNK #4*
+* Categorization. All of the unique websites of the sampled behavioral dataset have been classified into categories. In such a way it was possible to assess whether a certain website was travel related or not. The code related to this step is available in *Appendix #2 Code. CHUNK #2A* and *Appendix #2 Code. CHUNK #2B*, *Appendix #2 Code. CHUNK #3A*, *Appendix #2 Code. CHUNK #3B*
+* Analysis. The aggregated information from the behavioral data has been regressed over the survey data to reveal the impact the unobservable personality attitudes and traits on the tourism related online behavior while controlling for the trip characteristics. The code related to this step is available in *Appendix #2 Code. CHUNK #8*
+
+In the following sections, I will first focus on explaining the behavioral data and the technology behind it. Afterward, the 5 major steps of the methodology are explained in details. Then I proceed with the descriptive results of each of the datasets (survey and behavioral). Finally, I report the analysis results. 
+
+##Behavioral data & Technology 
+
+The behavioral data, also referred to as observational data, reflects the online behavior of the consumers. It consists of records of the interaction made via consumers' digital devices and the Internet. 
+
+The behavioral data has been collected via a technology developed and provided for this research by [Wakoopa](http://wakoopa.com). The company is a provider of a tracking technology. The technology is utilized primarily for market research purposes. Similarly to the market research consumer panels, where panelists enroll to participate in online surveys for incentives, Wakoopa provides its technology to market research consumer panel companies that are interested in tracking the online behavior of their panelists. After enrolling into the panel and giving their consent to be tracked, panelists install an application on their devices i.e. desktop, mobile, and tablet. The tracking software collects every interaction of the panelists' devices on the Internet which consists of a path or the address the panelists are reaching and the duration of the visit. The software works in a different manner over the different operation systems platforms and devices, but the final result consists of recording raw data containing events. Each event has the address the participant accessed, the duration of the interaction and the client requesting the information i.e. browser, app etc.
+
+##Steps 
+
+###Panel and sampling
+
+Using Wakoopa's panel it was possible to 'pre-screen' relevant respondents for the purposes of the analysis, that could be invited to participate in the survey I have conducted. The respondents that I was looking for, should have been active on tourism related websites and should have conducted a purchase on such websites in the period of January 2015 to June 2016. Herein, I describe the process that was used to reach such subjects. Upon starting of the project the panel used for the research had 6682 active panelists and 7103 active devices. The majority of the panelists were being active only on the desktop. See *Appendix #1. Panelists* and *Appendix #2. Devices* for reference. 
+
+First, I started looking into tourism related websites in the Netherlands. Initially, I used 300 domains to account for the majority of the tourism related internet traffic in the Netherlands according to the internet analytics company SimilarWeb. Afterward, based on this data I exported the activity of the whole panel over those websites ranging from 01/2015 to 06/2016. The data of this activity was manually analyzed looking for the end pages of the payments, also referred to as  "confirmation" pages or "thank you" pages. Confirmation pages are the pages where a customer has been redirected after conducting a purchase at a company website. In general, the analysis consists of looking up keywords within the travel domains URLs and marking down the common patterns with the aid of regular expressions  (See <!-- ref -->@mitkov2005oxford for discussion).  Identified were the patterns of "confirmation" pages and  data for the participants visited from the period of 01/03/2016 to 16/06/2016 was exported. Using this information, it was possible to identify a sample composed of 949 respondents which were to be invited into the online survey as described in the second step below.
+
+Given the estimation of the incidence rate provided by the panel supplier, 20%,  and the initially desired sample of 500 respondents more respondents were needed. Therefore, an additional random sample of 123 respondents was selected based on whether they were active on the 300 initial domains but without evidence for their purchases from the data.
+
+###Survey
+
+The selected 1039 panelists were invited to participate in an online survey, that aimed to reveal their attitudinal and personal characteristics as well as the trip characteristics of their last travel. The fieldwork was conducted during the last week of June 2016. Out of the 1039 invitations sent 872 started the survey, which resulted in 495 completed interviews. (Note to self, move this to a separate cleaning section). The data was further cleaned by accounting for speeders and flatliners. Speeders were panelists that have finished the survey within less than half of the average length of the interview. Flatliners refer to respondents who have answered all of the grid questions in a straight line. Moreover, a few respondents attempted to participate in the survey multiple times and thus, they were excluded from further analysis. Thus, the final dataset consists of 426 observations.  
+
+The survey consisted of several parts. First, a screening criterion was used. It accounted for the number of travel-related purchases since March 2016. Respondents with no travel related purchases were not allowed to further proceed. Then, subjects who have not purchased neither flight nor accommodation were also excluded from the questionnaire. Business only travelers were not relevant for the analysis, thus they were also screened out, leaving only panelists who have gone on a leisure trip or both on a leisure and business trip. The second part was a demographics section, which consisted of question regarding age, gender, and income. The next part of the questionnaire was in regards to the trip characteristics, which was adapted from <!-- ref -->@Roehl1992 and contained information about moment of booking, destination, planning horizon, information sources used i.e. Internet, advice from friend and relatives, tourist information office, travel agent etc., products purchased online, duration of the trip or number of nights spent away from home, whether the destination was visited before and how many times, number of travel companions, indication whether there was children on the trip and whether subjects visited friends or relatives during their trip.
+
+The next two sections aimed to reveal more about the subjects personality and risk and uncertainty attitude. Items assessing risk and uncertainty originate from <!-- ref -->@Quintal2010. Respondents reported their risk attitude on three item scale which the authors adapt from <!-- ref -->@donthu1996infomercial. Uncertainty attitude has been assessed on four items scale which authors adapt from <!-- ref -->@yoo2002testing and the scale is based on <!-- ref -->@hofstede1980motivation UA items. I have chosen these scales as they are the shortest reliable scales for self-assessing the risk and uncertainty attitudes. Using such scales I can make sure to not tire respondents and keep them engaged. Personality traits related to openness, consciousness, extraversion, agreeableness and neuroticism have been assessed using the short scale from the big five inventory proposed by <!-- ref -->@Gosling2003. 
+
+###Data processing
+    
+After having collected and cleaned all the data, I further proceed with data processing and analysis. All of the data processing and the analyzation tasks of this paper were done in R Studio. All of the code, including libraries can be seen in the appendix. 
+
+The data processing includes merging down the two main behavioral streams of data that originate from desktop and mobile. Additional to that it is needed to classify and derive all the tourism related domains that will be further used for analysis. This is an important step as it will allow to analysis what the relationship between the online travel behavior and the traveler's attitudinal characteristics are.  Categorization of the domains was done using machine learning classification algorithms provided by uClassify.com. The domains from the desktop and mobile behavioral data and all of the mobile apps are further classified using keywords.  
+
+Next step is, converting the raw data set onto micromoments. They are also further used in the analysis as I examine the relationship between one's micromoment frequency and subject's risk and uncertainty attitude.  Micromoments are essentially user sessions where users were active at a given moment of time. For example, if a panelist access a certain domain and spend five minutes on it and then become inactive for more than 3 minutes, this will result in a factor variable grouping all of the observation within those five minutes of activity. If a travel related website has been visited during the micromoment, a dummy variable is assigned to this moment to indicate this. Furthermore, purchases of travel related products were included in the data based on the initial dataset used for pooling the sample out the panel for the survey. The final dataset includes aggregated information about panelists' activity over two main levels. 1. top-level i.e. total activity 2. low-level micromoment level.
+
+This section includes the data processing tasks done on the behavioral data including descriptive statistics and variable derivation, classification and aggregation on the different levels intended for further analysis.
+
+Starting point of the analysis of the behavioral data include procession the data and rendering it in a format suitable for running the analysis. In its initial form the data has been exported in a format containing the following variables:  for the desktop data (sample data, see: *Appendix #3 Desktop data*) and  for the mobile data (sample data, see: *Appendix #4 Mobile data*). The next step is adding *"host"* variable to both datasets. The host variable contains domains and the subdomains that are going to be used for the categorization whether the domains were travel related or not. The next query on the data included  identifying all of the micromoments in the data. First, the data has been subsetted on *"panelist_id"* level, sorted by the the timestamp *"used_at"* and assigned into a list where each element is the full data for each individual respondent. The sum of *"used_at"* variables and *"active_seconds"*, the duration in seconds respondent spend on the page, were compared to *"used_at"* variable of the next observation. If  differences larger than five minutes were found all of the variables prior to this difference were grouped together under a common factor variable.
+
+
+
+``` {r echo=FALSE, results = 'asis'}
+
+stargazer(export_files$desktop_columns, summary = FALSE, type = "latex", title = "Desktop dataset", header=FALSE, font.size="tiny")
+
+```
+
+
+
+``` {r echo=FALSE, results = 'asis'}
+
+stargazer(export_files$mobile_columns, summary = FALSE, type = "latex", title = "Mobile dataset", header=FALSE, font.size="tiny")
+
+```
+
+### Categorization
+
+The categorization procedure includes using [uClassify](uClassify.com) machine learning algorithms and also using keywords. The full activity coming from desktop and mobile devices resulted in 194,534 unique domains. The categorization algorithm has been responsible for classifying all domains that have more than ten visits or 47,818 domains in total works as follows. A web-scraper designed for these projects accesses a collection of domains and collects all of the information on the page, then removes the HTML elements along with the punctuation and renders down the information only to a part that is visible to the website visitors. Then, it passes this information to an application programmable interface (API) that returns the probability of this text being into sixteen different categories including travel. 
+
+> The full list of categories includes: 
+
+``` {r echo=FALSE, results = 'asis'}
+
+print(export_files$API_Categ)
+
+```
+
+Websites with content with the highest probability to be travel were assigned a value of a dummy variable 1 or 0 otherwise.
+ 
+Due to technical and time contains the API service wasn't able to classify all of the domains. Therefore, the full dataset of unique domains names has also been scanned for keywords. Keywords include travel, tourism, accommodation, hotels, flight etc. (full list of the keywords can be found in the code in the appendix). If any of the keywords appear within the domain name, the respective domain has also been assigned to the list of travel domains. The same keyword approach has been used for classification of the application on mobile devices, where the apps have been classified using their names.
+
+### Analysis
+
+This paper utilizes regression analysis, factor analysis, and stepwise regression. The functional form has been selected based on regression analysis. The underlying factors regard to risk and uncertainty attitudes and BGI have been analyzed by exploratory factor analysis. Finally, the main model has been compilated using stepwise regression. The analysis techniques utilized by this research please refer to the appendix. The "Analysis" chapter contains brief elaboration on regression model "OLS", factor analysis and all of the tests concerning the underlying assumptions of the "OLS" assuring the best model performance.  
+
+
+### Model selection 
+
+#### Restricted Model
+
+There are two distinct sources of data resulting in three data sets to be investigated.
+
+1.    Dataset from desktop
+2.    Dataset from mobile
+3.    Combined dataset from desktop and mobile
+ 
+Furthermore, there are five dependent variables that are intended to be examined during this research. Namely, 
+
+1.    Number of travel micro-moments
+2.    Number of unique travel domains visited
+3.    Number of travel pageviews
+4.    Total time in seconds spent on travel domains
+5.    Total length in seconds of travel micro-moments
+
+The difference between the last two (*4* and *5*) is as follows. Total time in seconds (*4.*) has been measured once a panelist arrives at a certain website that has been classified as travel, whereas length (*5.*) is the total length (i.e. the difference between the start and end) of micro-moments amongst which a participant visited a travel related domain.
+
+The restricted model for each of the three datasets takes the following form:
+
+|Model | Dependent variables| Independent variables | Control ^\*^ | Control2 |
+|------|-------------------|-----------|------------|------------|
+| \# 1 | Number of travel micro-moments | Risk + Uncertainty + Interaction | Total micro-moments | Total purchases + Days active in the panel                  |
+| \# 2 |Number of unique travel domains visited          || Total domains              ||
+| \# 3 |Number of travel pageviews                       || Total pageviews            ||
+| \# 4 |Total time in seconds spent on travel domains   || Total time                 ||
+| \# 5 |Total length in seconds of travel micro-moments || Total micro-moments length ||
+
+Table: Restricted model(s)
+
+ ^\*^ As there was only one purchase detected on mobile devices this term wasn't present in the mobile model
+
+Running Ramsey-Reset test per each of the basic models showed evidence that the functional form of the models is not well specified, thus the models were rejected. Consequently, all of the dependent variables along with their corresponding controls were transformed into logs accounting for additional five models per each dataset. The results from the consequent running of the Ramsey-Reset test were still not satisfying, as the test showed significant results indicating that the functional form of the model is not well specified. Consequently, the corresponding control variables, accounting for total activity and purchases, were transformed into binary variables with values 1-indicating a participant belongs to a highly active groups of participants (having values above the mean of the sample) and 0 vise versa. The latter transformation accounted for investigating ten more models per each dataset reaching the total number of thirty models to be reviewed. The functional form of the model has been selected based on the dataset containing desktop data  as 1) this dataset is the most complete in terms of a number of observation and 2) the participants were selected based on their desktop behavior.
+
+Among all tested models, based on the results from the Ramsey-Reset test, I select the following functional form of the model for Desktop, Mobile, and Combined datasets. Shapiro-Wilk test for normality also performs best for this functional form, yet the sample is large enough so we can relax the normality assumption.
+
+|Model | Dependent variables| Independent variables | Control ^\*^ | Control2 ^\*\*^ |
+|------|-------------------|-----------|------------|------------|
+| \# 1 | log(\#) of travel micro-moments | Risk + Uncertainty + Interaction | (D) Total micro-moments | (D) Total purchases + Days active in the panel                  |
+| \# 2 | log(\#) of unique travel domains visited          ||  (D) Total domains              ||
+| \# 3 | log(\#) of travel pageviews                       ||  (D) Total pageviews            ||
+| \# 4 | log(\#) time in seconds spent on travel domains   ||  (D) Total time                 ||
+| \# 5 | log(\#) length in seconds of travel micro-moments ||  (D) Total micro-moments length ||
+
+Table: Restricted model(s) functional form
+
+^\*^ Note: as there was only one purchase detected on mobile devices this term wasn't present in the mobile model.  
+^\*\*^ Dummy variables take value 1 is the respondents' activity is above the average activity of the sample and 0 otherwise.  
+
+A table with the results from the restricted model along with the model performance metrics can be found in the appendix:
+
+*Table 4.1: Desktop data, restricted model
+*Table 4.2: Mobile data, restricted model
+*Table 4.3: Combined data, restricted model
+*Table 4.4: Restricted models tests
+
+Due to poor model performance is shown in *Table 4.4: Restricted models tests* row **11 to 15**, the model shown in *Table 4.3: Combined data, restricted model* has been rejected. See Appendix *Table 4.4: Restricted models tests* for reference.
+
+#### Final Model
+
+Based on the selected functional form of the model(s) I proceed with stepwise selection in order to select the final model across desktop and mobile. First, the models are presented then results of the OLS performance tests are shown in the appendix under *Table 7: Full model tests, Desktop* and *Table 9: Full model tests, Mobile*. The tests have shown evidence for heteroscedasticity. Therefore, in all of the tables of the results, the standard errors have been corrected using white standard errors. The procedure is explained in the appendix.
+
+
+
